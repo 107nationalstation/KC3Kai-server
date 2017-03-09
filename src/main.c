@@ -268,7 +268,7 @@ void read_request(struct process *process)
 					//int json_count = read(ffd , index_json , 1024);
 					Read(ffd , index_json);
 					int json_count = strlen(index_json);
-					printf("json_count: %d %d %s\n" , ffd , json_count , index_json);
+					//printf("json_count: %d %d %s\n" , ffd , json_count , index_json);
 					json_count -= 3;
 					strcpy(index_json + json_count , ", {\"name\": \"");
 					json_count += 12;
