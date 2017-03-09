@@ -408,7 +408,7 @@ void read_request(struct process *process)
 		char tempstring[256];
 
 		//检查有无If-Modified-Since，返回304
-		char *c = strstr(buf, HEADER_IF_MODIFIED_SINCE);
+		char *c = strstr(process->header, HEADER_IF_MODIFIED_SINCE);
 		if (c != 0) {
 			char *rn = strchr(c, '\r');
 			if (rn == 0) {

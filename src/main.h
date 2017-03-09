@@ -3,13 +3,13 @@
 
 #define USE_SENDFILE 1
 
-#define MAXEVENTS	10240
-#define MAX_PORCESS	10240
+#define MAXEVENTS	1024
+#define MAX_PORCESS	1024
 
 #ifdef USE_SENDFILE
-#define BUF_SIZE	65536
+#define BUF_SIZE	1024
 #else
-#define BUF_SIZE	65536 * 2
+#define BUF_SIZE	1024 * 2
 #endif
 #define MAX_URL_LENGTH	128
 
